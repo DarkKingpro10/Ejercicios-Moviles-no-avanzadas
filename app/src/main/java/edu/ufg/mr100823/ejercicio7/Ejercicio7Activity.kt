@@ -7,6 +7,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import edu.ufg.mr100823.R
+import java.text.Collator
+import java.util.Locale
 
 class Ejercicio7Activity : AppCompatActivity() {
 
@@ -56,7 +58,8 @@ class Ejercicio7Activity : AppCompatActivity() {
             "Venezuela" to "28.8 millones"
         )
 
-        val paises = datosPaises.keys.sorted().toTypedArray()
+        // Se usa el método especializado para el ordenamiento alfabético
+        val paises = ordenarListaAlfabeticamente(datosPaises.keys)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, paises)
         lvPaises.adapter = adapter
@@ -69,5 +72,18 @@ class Ejercicio7Activity : AppCompatActivity() {
             tvInfoPoblacion.text = mensaje
             Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
         }
+    }
+
+    /**
+     * Ordena una colección de strings alfabéticamente siguiendo las reglas del idioma español.
+     * Utiliza Collator para asegurar que caracteres con tildes y la letra Ñ se posicionen correctamente,
+     * lo cual es la mejor práctica en Android para listas orientadas al usuario.
+     */
+    private fun ordenarListaAlfabeticamente(lista: Set<String>): List<String> {
+        val collator = Collator.getInstance(Locale("es", "ES"))
+        // strength determina qué tan sensible es el ordenamiento a las diferencias (acentos, mayúsculas).
+        // TERTIARY es el nivel estándar que distingue casi todo, incluyendo acentos.
+        collator.strength = Collator.TERTIARY
+        return lista.toList().sortedWith(collator)
     }
 }

@@ -9,11 +9,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingresa el número a marcar"
+        android:text="Ingresa el número a marcar (Ejercicio 8.1)"
         android:textSize="18sp"
         android:layout_marginBottom="16dp" />
 
-
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número de teléfono"
+        android:inputType="phone"
+        android:layout_marginBottom="16dp" />
 
     <ImageButton
         android:id="@+id/ibTelefono"

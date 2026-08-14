@@ -13,6 +13,7 @@ import edu.ufg.mr100823.ejercicio7.Ejercicio7Activity
 import edu.ufg.mr100823.ejercicio8.Ejercicio8Activity
 import edu.ufg.mr100823.ejercicio8_1.Ejercicio8_1Activity
 import edu.ufg.mr100823.ejercicio8_2.Ejercicio8_2Activity
+import edu.ufg.mr100823.ejercicio9.Ejercicio9Activity
 import edu.ufg.mr100823.model.Ejercicio
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         listaEjercicios.add(Ejercicio("Ejercicio 8", "Acción con ImageButton (Teléfono)", Ejercicio8Activity::class.java))
         listaEjercicios.add(Ejercicio("Ejercicio 8.1", "Llamada con permisos y EditText", Ejercicio8_1Activity::class.java))
         listaEjercicios.add(Ejercicio("Ejercicio 8.2", "Marcador (Dial) con EditText", Ejercicio8_2Activity::class.java))
+        listaEjercicios.add(Ejercicio("Ejercicio 9", "Adivinar número aleatorio (Popup)", Ejercicio9Activity::class.java))
 
         rvEjercicios.layoutManager = LinearLayoutManager(this)
         rvEjercicios.adapter = EjercicioAdapter(listaEjercicios)

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Cuál fue el número que vio?"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etNumeroIngresado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese el número"
+        android:inputType="number"
+        android:autofillHints="none"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnControlar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Controlar"
+        android:onClick="controlarNumero" />
+
+    <Button
+        android:id="@+id/btnGenerarNuevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generar otro número"
+        android:layout_marginTop="8dp"
+        android:onClick="generarOtroNumero" />
+
+</LinearLayout>

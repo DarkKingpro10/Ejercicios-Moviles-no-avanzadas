@@ -16,6 +16,8 @@ import edu.ufg.mr100823.ejercicio8_2.Ejercicio8_2Activity
 import edu.ufg.mr100823.ejercicio9.Ejercicio9Activity
 import edu.ufg.mr100823.ejercicio10.Ejercicio10Activity
 import edu.ufg.mr100823.ejercicio11.Ejercicio11Activity
+import edu.ufg.mr100823.ejercicio12.Ejercicio12Activity
+import edu.ufg.mr100823.ejercicio12_2.Ejercicio12_2Activity
 import edu.ufg.mr100823.model.Ejercicio
 
 class MainActivity : AppCompatActivity() {
@@ -38,6 +40,8 @@ class MainActivity : AppCompatActivity() {
         listaEjercicios.add(Ejercicio("Ejercicio 9", "Adivinar número aleatorio (Popup)", Ejercicio9Activity::class.java))
         listaEjercicios.add(Ejercicio("Ejercicio 10", "Verificación de Usuario y Clave", Ejercicio10Activity::class.java))
         listaEjercicios.add(Ejercicio("Ejercicio 11", "Detalles del Programador (Navegación)", Ejercicio11Activity::class.java))
+        listaEjercicios.add(Ejercicio("Ejercicio 12", "Navegador Web Integrado", Ejercicio12Activity::class.java))
+        listaEjercicios.add(Ejercicio("Ejercicio 12.2", "Directorio de Sitios Web (List)", Ejercicio12_2Activity::class.java))
 
         rvEjercicios.layoutManager = LinearLayoutManager(this)
         rvEjercicios.adapter = EjercicioAdapter(listaEjercicios)

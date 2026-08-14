@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:name="android.hardware.telephony" android:required="false" />
 
     <application
@@ -36,6 +37,9 @@
         <activity android:name="edu.ufg.mr100823.ejercicio10.Ejercicio10Activity" android:exported="false" />
         <activity android:name="edu.ufg.mr100823.ejercicio11.Ejercicio11Activity" android:exported="false" />
         <activity android:name="edu.ufg.mr100823.ejercicio11.Programador11Activity" android:exported="false" />
+        <activity android:name="edu.ufg.mr100823.ejercicio12.Ejercicio12Activity" android:exported="false" />
+        <activity android:name="edu.ufg.mr100823.ejercicio12.WebViewActivity" android:exported="false" />
+        <activity android:name="edu.ufg.mr100823.ejercicio12_2.Ejercicio12_2Activity" android:exported="false" />
 
     </application>
 

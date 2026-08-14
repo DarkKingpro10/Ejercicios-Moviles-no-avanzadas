@@ -15,6 +15,7 @@ import edu.ufg.mr100823.ejercicio8_1.Ejercicio8_1Activity
 import edu.ufg.mr100823.ejercicio8_2.Ejercicio8_2Activity
 import edu.ufg.mr100823.ejercicio9.Ejercicio9Activity
 import edu.ufg.mr100823.ejercicio10.Ejercicio10Activity
+import edu.ufg.mr100823.ejercicio11.Ejercicio11Activity
 import edu.ufg.mr100823.model.Ejercicio
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         val rvEjercicios = findViewById<RecyclerView>(R.id.rvEjercicios)
         val listaEjercicios = mutableListOf<Ejercicio>()
 
-        // Registro de ejercicios según el Pipeline y reordenación solicitada
+        // Registro de ejercicios según el Pipeline
         listaEjercicios.add(Ejercicio("Ejercicio 3", "Suma simple de dos números", Ejercicio1Activity::class.java))
         listaEjercicios.add(Ejercicio("Ejercicio 4", "Suma y Resta con CheckBoxes", Ejercicio3Activity::class.java))
         listaEjercicios.add(Ejercicio("Ejercicio 5", "Suma y Resta con RadioButtons", Ejercicio2Activity::class.java))
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         listaEjercicios.add(Ejercicio("Ejercicio 8.2", "Marcador (Dial) con EditText", Ejercicio8_2Activity::class.java))
         listaEjercicios.add(Ejercicio("Ejercicio 9", "Adivinar número aleatorio (Popup)", Ejercicio9Activity::class.java))
         listaEjercicios.add(Ejercicio("Ejercicio 10", "Verificación de Usuario y Clave", Ejercicio10Activity::class.java))
+        listaEjercicios.add(Ejercicio("Ejercicio 11", "Detalles del Programador (Navegación)", Ejercicio11Activity::class.java))
 
         rvEjercicios.layoutManager = LinearLayoutManager(this)
         rvEjercicios.adapter = EjercicioAdapter(listaEjercicios)

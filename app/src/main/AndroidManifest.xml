@@ -34,6 +34,8 @@
         <activity android:name="edu.ufg.mr100823.ejercicio8_2.Ejercicio8_2Activity" android:exported="false" />
         <activity android:name="edu.ufg.mr100823.ejercicio9.Ejercicio9Activity" android:exported="false" />
         <activity android:name="edu.ufg.mr100823.ejercicio10.Ejercicio10Activity" android:exported="false" />
+        <activity android:name="edu.ufg.mr100823.ejercicio11.Ejercicio11Activity" android:exported="false" />
+        <activity android:name="edu.ufg.mr100823.ejercicio11.Programador11Activity" android:exported="false" />
 
     </application>
 

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:name="android.hardware.telephony" android:required="false" />
@@ -41,6 +42,9 @@
         <activity android:name="edu.ufg.mr100823.ejercicio12.WebViewActivity" android:exported="false" />
         <activity android:name="edu.ufg.mr100823.ejercicio12_2.Ejercicio12_2Activity" android:exported="false" />
         <activity android:name="edu.ufg.mr100823.ejercicio12_3.Ejercicio12_3Activity" android:exported="false" />
+
+        <!-- Registro del Parcial 1 -->
+        <activity android:name="edu.ufg.mr100823.parcial1.Parcial1Activity" android:exported="false" />
 
     </application>
 

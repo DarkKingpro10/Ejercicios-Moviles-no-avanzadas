@@ -29,3 +29,5 @@ El proyecto utiliza un sistema dinámico para listar ejercicios en el Home (`Mai
 
 5. **Eventos y Acciones:**
    - Las acciones de los botones (como clics) deben estar enlazadas preferiblemente mediante el atributo `android:onClick` en el archivo XML, apuntando a un método público en la Activity correspondiente que reciba un objeto `View` como parámetro.
+6. No olvides que las vistas no deben cubrir toda la pantalla deben reservar espacio para la barra
+    de herramientas del telefono donde sale la bateria, notificacion redes etc

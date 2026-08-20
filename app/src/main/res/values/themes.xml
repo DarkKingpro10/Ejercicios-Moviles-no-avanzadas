@@ -1,9 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.EjerciciosMoviles" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <!-- Tema Base de la Aplicación -->
+    <!-- Usamos NoActionBar para manejar nuestras propias barras y buscadores -->
+    <style name="Theme.EjerciciosMoviles" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Color solicitado por el usuario -->
+        <item name="colorPrimary">#00eeab</item>
+        <item name="colorSecondary">#00c48c</item>
+        <item name="colorOnPrimary">@android:color/black</item>
+
+        <!-- Distinción de la barra de estado (Batería, Reloj) -->
+        <item name="android:statusBarColor">#00c48c</item>
+        <!-- Iconos oscuros para que sean legibles sobre el color brillante -->
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Aseguramos que fitsSystemWindows funcione correctamente -->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
 
-    <style name="Theme.EjerciciosMoviles" parent="Base.Theme.EjerciciosMoviles" />
+    <!-- Alias por compatibilidad -->
+    <style name="Theme.EjerciciosMoviles.NoActionBar" parent="Theme.EjerciciosMoviles" />
 </resources>

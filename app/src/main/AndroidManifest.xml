@@ -19,7 +19,8 @@
 
         <activity
             android:name="edu.ufg.mr100823.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.EjerciciosMoviles.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -44,7 +45,10 @@
         <activity android:name="edu.ufg.mr100823.ejercicio12_3.Ejercicio12_3Activity" android:exported="false" />
 
         <!-- Registro del Parcial 1 -->
-        <activity android:name="edu.ufg.mr100823.parcial1.Parcial1Activity" android:exported="false" />
+        <activity
+            android:name="edu.ufg.mr100823.parcial1.Parcial1Activity"
+            android:exported="false"
+            android:theme="@style/Theme.EjerciciosMoviles.NoActionBar" />
 
     </application>
 

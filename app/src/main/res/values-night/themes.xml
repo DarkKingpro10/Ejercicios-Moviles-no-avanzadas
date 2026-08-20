@@ -2,6 +2,12 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.EjerciciosMoviles" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">#BB86FC</item>
+        <item name="colorPrimaryVariant">#3700B3</item>
+        <item name="colorOnPrimary">@android:color/black</item>
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">#3700B3</item>
     </style>
+
+    <style name="Theme.EjerciciosMoviles" parent="Base.Theme.EjerciciosMoviles" />
 </resources>

@@ -7,9 +7,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import edu.ufg.mr100823.R
 import edu.ufg.mr100823.model.Ejercicio
+import java.util.Locale
 
-class EjercicioAdapter(private val lista: List<Ejercicio>) :
+class EjercicioAdapter(private var listaOriginal: List<Ejercicio>) :
     RecyclerView.Adapter<EjercicioAdapter.ViewHolder>() {
+
+    private var listaFiltrada: List<Ejercicio> = listaOriginal
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvTitulo: TextView = view.findViewById(R.id.tvTitulo)
@@ -23,7 +26,7 @@ class EjercicioAdapter(private val lista: List<Ejercicio>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = lista[position]
+        val item = listaFiltrada[position]
         holder.tvTitulo.text = item.titulo
         holder.tvDescripcion.text = item.descripcion
         holder.itemView.setOnClickListener {
@@ -31,5 +34,17 @@ class EjercicioAdapter(private val lista: List<Ejercicio>) :
         }
     }
 
-    override fun getItemCount() = lista.size
+    override fun getItemCount() = listaFiltrada.size
+
+    fun filter(query: String) {
+        listaFiltrada = if (query.isEmpty()) {
+            listaOriginal
+        } else {
+            listaOriginal.filter {
+                it.titulo.lowercase(Locale.getDefault()).contains(query.lowercase(Locale.getDefault())) ||
+                it.descripcion.lowercase(Locale.getDefault()).contains(query.lowercase(Locale.getDefault()))
+            }
+        }
+        notifyDataSetChanged()
+    }
 }

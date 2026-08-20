@@ -2,6 +2,7 @@ package edu.ufg.mr100823
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import edu.ufg.mr100823.adapter.EjercicioAdapter
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val rvEjercicios = findViewById<RecyclerView>(R.id.rvEjercicios)
+        val svBuscador = findViewById<SearchView>(R.id.svBuscador)
+        
         val listaEjercicios = mutableListOf<Ejercicio>()
 
         // Registro de ejercicios según el Pipeline
@@ -45,7 +48,20 @@ class MainActivity : AppCompatActivity() {
         listaEjercicios.add(Ejercicio("Ejercicio 12.2", "Directorio de Sitios Web (List)", Ejercicio12_2Activity::class.java))
         listaEjercicios.add(Ejercicio("Ejercicio 12.3", "Buscador con Historial", Ejercicio12_3Activity::class.java))
 
+        val adapter = EjercicioAdapter(listaEjercicios)
         rvEjercicios.layoutManager = LinearLayoutManager(this)
-        rvEjercicios.adapter = EjercicioAdapter(listaEjercicios)
+        rvEjercicios.adapter = adapter
+
+        // Configuración del buscador
+        svBuscador.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                adapter.filter(newText ?: "")
+                return true
+            }
+        })
     }
 }

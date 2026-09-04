@@ -22,6 +22,7 @@ import edu.ufg.mr100823.ejercicio12_2.Ejercicio12_2Activity
 import edu.ufg.mr100823.ejercicio12_3.Ejercicio12_3Activity
 import edu.ufg.mr100823.ejercicio13_1.Ejercicio13_1Activity
 import edu.ufg.mr100823.ejercicio13_2.Ejercicio13_2Activity
+import edu.ufg.mr100823.ejercicio14_1.Ejercicio14_1Activity
 import edu.ufg.mr100823.model.Ejercicio
 import edu.ufg.mr100823.parcial1.Parcial1Activity
 
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         listaEjercicios.add(Ejercicio("Ejercicio 12.3", "Buscador con Historial", Ejercicio12_3Activity::class.java))
         listaEjercicios.add(Ejercicio("Ejercicio 13.1", "Guardar correo con SharedPreferences", Ejercicio13_1Activity::class.java))
         listaEjercicios.add(Ejercicio("Ejercicio 13.2", "Agenda personal con SharedPreferences", Ejercicio13_2Activity::class.java))
+        listaEjercicios.add(Ejercicio("Ejercicio 14.1", "Bloc de notas (Archivos TXT)", Ejercicio14_1Activity::class.java))
         
         // Registro del Parcial 1
         listaEjercicios.add(Ejercicio("Parcial 1", "Listado de contactos con opción de llamada (Dial)", Parcial1Activity::class.java))

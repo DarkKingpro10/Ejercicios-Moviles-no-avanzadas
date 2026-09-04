@@ -45,6 +45,7 @@
         <activity android:name="edu.ufg.mr100823.ejercicio12_3.Ejercicio12_3Activity" android:exported="false" />
         <activity android:name="edu.ufg.mr100823.ejercicio13_1.Ejercicio13_1Activity" android:exported="false" />
         <activity android:name="edu.ufg.mr100823.ejercicio13_2.Ejercicio13_2Activity" android:exported="false" />
+        <activity android:name="edu.ufg.mr100823.ejercicio14_1.Ejercicio14_1Activity" android:exported="false" />
 
         <!-- Registro del Parcial 1 -->
         <activity
